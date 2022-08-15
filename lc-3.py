@@ -473,7 +473,6 @@ def op_trap():
 	reg_write(7, reg_read(R_PC))
 	
 	if trapvect == TRAP_GETC:		# get char from keyboard, not echoed
-		ch = getch()
 		reg_write(0, ord(getch()))
 		set_cc(0)
 	
